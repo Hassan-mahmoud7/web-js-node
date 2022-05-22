@@ -1,0 +1,24 @@
+{{>header}}
+{{>navbar}}
+<section class="container my-4">
+    <h3 class="text-center text-success my-3">add  Customer Transaction</h3>
+    <form method="post"> 
+     
+        <div class="mb-3">
+            <input name="value" class="form-control" placeholder="value">
+        </div>
+        <div class="mb-3">
+            <select name="name" class="form-control">
+                <option selected disabled>please choose select</option>
+                {{#each chSelect}}
+                <option value="{{this}}">{{this}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary">Add Transaction</button>
+        </div>
+
+    </form>
+</section>
+{{>footer}}

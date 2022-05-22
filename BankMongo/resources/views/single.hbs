@@ -1,0 +1,33 @@
+{{>header}}
+{{>navbar}}
+<section class="container my-4">
+    <h3 class="text-center text-success">SHOW COSTOMER</h3>
+    {{#unless users}}
+    <div class="alert alert-danger">
+        no costomer found
+    </div>
+
+    {{else}}
+    <table class="table table-stripped">
+        <thead>
+            <th>ID</th>
+            <th>name</th>
+            <th>accNum</th>
+            <th>Balance</th>
+            <th>transactions</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{user._id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.accNum}}</td>
+                <td>{{user.Balance}}</td>
+                <td>{{user.transactions}}</td>
+
+            </tr>
+
+        </tbody>
+    </table>
+    {{/unless}}
+</section>
+{{>footer}}
